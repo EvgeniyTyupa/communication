@@ -70,7 +70,7 @@ const Main = (props) => {
     const [isOpenOneTrener, setIsOpenOneTrener] = useState(false);
     const [isOpenSecondTrener, setIsOpenSecondTrener] = useState(false);
 
-    const [userURL, setUserURL] = useState(history.location.href);
+    const [userURL, setUserURL] = useState(window.location.href);
 
     const [subscribeValue, setSubscribeValue] = useState("");
 

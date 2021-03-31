@@ -1,6 +1,6 @@
 import * as axios from "axios";
 
-const baseURL = 'https://v1.nocodeapi.com/nadai/google_sheets/QTobHYbteUwfgQfQ?tabId=sheet1&api_key=GHCmpNtnTEhcSbDjA';
+const baseURL = 'https://v1.nocodeapi.com/nadai/google_sheets/QTobHYbteUwfgQfQ?tabId=new_orders&api_key=GHCmpNtnTEhcSbDjA';
 
 export const googleApi = {
     saveDataToGoogleSheet(formData){

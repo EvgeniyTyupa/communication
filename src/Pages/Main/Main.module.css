@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     font-family: 'Montserrat' !important;
+    overflow: hidden;
 }
 .lang{
     position: fixed;
@@ -22,6 +23,12 @@
     font-family: 'Montserrat' !important;
     font-weight: bold;
     color: white;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+}
+.activeLang{
+    color: #01737B !important;
+    border: 1px solid #01737B !important;
 }
 .scrolledNav{
     background: white !important;
@@ -29,6 +36,10 @@
     box-shadow: 0 0 20px -8px grey !important;
     padding-bottom: 25px;
     padding-top: 25px;
+}
+.scrolledNav .activeLang{
+    color: #01737B !important;
+    border: 1px solid #01737B !important;
 }
 .scrolledNav button{
     color: black !important;
@@ -76,6 +87,7 @@
 .sub{
     font-size: 48px;
     margin-top: 161px;
+    text-align: center;
 }
 .sub p{
     margin-block-start: 0;
@@ -108,6 +120,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    width: 300px;
 }
 .cationRight{
     position: absolute;
@@ -123,6 +136,9 @@
     padding-left: 100px;
     padding-right: 100px;
     box-sizing: border-box;
+}
+.cationInfo img{
+    z-index: 2;
 }
 .cationInfoContainer{
     width: 50%;
@@ -151,8 +167,8 @@
 .registerBut{
     background: #01737B !important;
     border: 7px solid #F27125 !important;
-    width: 415px;
-    height: 122px;
+    width: 375px;
+    height: 102px;
     color: white !important;
     font-family: 'Montserrat' !important;
     font-weight: 600 !important;
@@ -160,6 +176,12 @@
     transition-duration: .3s !important;
     border-radius: 0 !important;
     box-sizing: border-box;
+}
+.registerBut a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
 }
 .registerBut:hover{
     background: #F27125 !important;
@@ -275,7 +297,7 @@
 }
 .whoContainer img{
     margin-left: 10px;
-    align-self: center;
+    align-self: flex-start;
 }
 .who h2{
     align-self: flex-start;
@@ -412,7 +434,7 @@
     position: relative;
     padding: 75px 50px;
     font-size: 24px;
-    font-family: 500;
+    font-weight: 500;
     text-align: center;
 }
 .whiteSpace{
@@ -444,7 +466,7 @@
 .trenersBlock{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .treners h2{
     text-align: left;
@@ -500,6 +522,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 105px;
+    background-color: #F27125;
+    position: relative;
+    height: 611px;
 }
 .priceContainer{
     width: 100%;
@@ -519,9 +545,550 @@
     letter-spacing: 0.03em;
     margin-bottom: 73px;
     align-self: flex-end;
+    margin-top: 74px;
 }
 .pricesContainer{
     display: flex;
     width: 100%;
+    justify-content: space-around;
+}
+.priceLeft{
+    bottom: -60px;
+    left: 0;
+    position: absolute;
+}
+.priceRight{
+    right: -300px;
+    top: -10%;
+    position: absolute;
+}
+.priceSide h3{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+}
+.priceSideText{
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+}
+.priceSide + .priceSide{
+    margin-top: 60px;
+}
+
+/* BONUS */
+
+.bonus{
+    width: 100%;
+    max-width: 1440px;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 148px;
+}
+
+.bonus img + img{
+    position: relative;
+    top: -50px;
+}
+.buttons{
+    width: 100%;
+    max-width: 1440px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    margin-top: 140px;
+}
+.buttons a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+.comments{
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+.comments h2{
+    font-size: 48px;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin-bottom: 73px;
+}
+.slider{
+    background-color: #ffc107;
+    width: 50%;
+    height: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.slide{
+    padding: 50px;
+    box-sizing: border-box;
+    height: 400px;
+    outline: none;
+}
+.slide p{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+.slide span{
+    width: 100%;
+    font-size: 16px;
+    align-self: flex-end !important;
+    text-align: right !important;
+    float: right;
+}
+.footer{
+    margin-top: 60px;
+    width: 100%;
+    height: 100px;
+    display: flex;
     justify-content: space-between;
+    max-width: 1440px;
+    align-self: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+}
+.footSide{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.footSide + .footSide{
+    justify-content: flex-end;
+}
+.links{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footSide svg{
+    width: 25px;
+}
+.footSide svg path{
+    fill: #01737B;
+    transition-duration: .3s;
+}
+.footSide svg:hover path{
+    fill: #048c96;
+}
+.footSide + .footSide div{
+    width: 100%;
+}
+.footSide button{
+    background-color: #01737B !important;
+    border-radius: 0 !important;
+    color: white !important;
+    font-family: 'Montserrat' !important;
+    font-weight: bold !important;
+    margin-left: 10px;
+    height: 55px;
+}
+
+@media screen and (max-width: 1024px){
+    .home h1{
+        margin-block-start: 367px;
+    }
+    .attention{
+        font-size: 32px;
+    }
+    .who{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .who img{
+        width: 44%;
+    }
+    .treners h2{
+        text-align: center;
+    }
+    .trenersBlock{
+        flex-direction: column;
+        align-items: center;
+    }
+    .trener{
+        margin-bottom: 55px;
+    }
+    .price{
+        margin-top: 55px;
+    }
+    .links{
+        width: 80%;
+    }
+    .links svg{
+        width: 40px;
+    }
+    .sub{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 868px){
+    .home h1{
+        margin-block-start: 200px;
+    }
+    .cationInfo img{
+        width: 60%;
+    }
+    .chat{
+        padding-left: 50px;
+        padding-right: 50px;
+        box-sizing: border-box;
+    }
+    .chatContent{
+        width: 50%;
+    }
+    .attention{
+        font-size: 28px;
+    }
+    .whoContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .whoContainer img{
+        align-self: center;
+        width: 100%;
+        margin-top: 25px;
+    }
+    .whoText{
+        width: 100%;
+    }
+    .forAll{
+        text-align: center;
+        align-self: center;
+        margin-left: 0;
+    }
+    .program h2{
+        align-self: center;
+    }
+    .blocks{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .blockItem{
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 67px;
+    }
+    .programEnd{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .trenerRight{
+        width: 170px;
+    }
+    .price{
+        height: max-content;
+        padding-bottom: 200px;
+    }
+    .pricesContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .price h2{
+        align-self: center;
+    }
+    .priceSide{
+        text-align: center;
+    }
+    .bonus{
+        flex-direction: column;
+    }
+    .bonus img + img{
+        margin-top: 70px;
+    }
+    .buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+    .buttons .registerBut{
+        margin-bottom: 25px;
+    }
+    .slider{
+        width: 80%;
+    }
+    .footer{
+        flex-direction: column;
+        height: max-content;
+        align-items: center;
+    }
+    .footer a{
+        height: 50px;
+    }
+    .links{
+        width: 100%;
+    }
+    .footSide{
+        margin-bottom: 25px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 658px){
+    .footer{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .footSide + .footSide{
+        flex-direction: column;
+    }
+    .footSide button{
+        width: 100%;
+        margin-top: 15px;
+    }
+    .comments h2{
+        font-size: 32px;
+    }
+    .priceContainer{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .price h2{
+        font-size: 32px;
+    }
+    .trenersContainer{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .trener{
+        width: 100%;
+    }
+    .trenerRight{
+        display: none;
+    }
+    .trenerLeft{
+        display: none;
+    }
+    .trener img{
+        width: 100%;
+    }
+
+    .openBlock{
+        width: 100%;
+    }
+    .program h2{
+        font-size: 32px;
+    }
+    .who h2{
+        font-size: 32px;
+        align-self: center;
+    }
+    .attention{
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 18px;
+    }
+    .chat{
+        flex-direction: column;
+        height: max-content;
+        margin-bottom: 50px;
+    }
+    .chatImages{
+        margin-right: 0;
+    }
+    .chatImages img{
+        width: 100%;
+    }
+    .chaLeft{
+        display: none;
+    }
+    .chatContent{
+        width: 100%;
+        top: 0
+    }
+    .chat h2{
+        font-size: 32px;
+    }
+    .chatSub{
+        margin-top: 25px;
+    }
+    .chaRight{
+        display: none;
+    }
+    .cationLeft{
+        display: none;
+    }
+    .cationRight{
+        display: none;
+    }
+    .headerLeft{
+        width: 150px;
+    }
+    .headerRight{
+        width: 100px;
+    }
+    .lang{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .home h1{
+        font-size: 38px;
+    }
+    .home span{
+        font-size: 22px;
+        padding: 26px 31px;
+        margin-top: 66px;
+    }
+    .treners h2{
+        font-size: 32px;
+    }
+    .sub{
+        font-size: 22px;
+        margin-top: 85px;
+    }
+    .cation img{
+        display: none;
+    }
+    .cationInfo{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .cationInfoContainer{
+        width: 100%;
+    }
+    .cation h2{
+        font-size: 32px;
+    }
+    .cation button{
+        top: 0;
+    }
+    .forAll{
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 468px){
+    .slide{
+        padding: 20px;
+    }
+    .slide p{
+        font-size: 13px;
+    }
+    .slider{
+        padding: 0;
+    }
+    .slide span{
+        align-self: center !important;
+        text-align: center !important;
+    }
+    .bonus img{
+        width: 300px;
+    }
+    .cationInfo{
+        margin-top: 70px;
+    }
+    .treners{
+        margin-top: 70px;
+    }
+    .trener h3{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .registerBut{
+        width: 250px;
+        font-size: 24px !important;
+    }
+    .chat{
+        margin-top: 80px;
+    }
+    .attention{
+        font-size: 14px;
+    }
+    .who{
+        margin-top: 70px;
+    }
+    .who h2{
+        text-align: center;
+    }
+    .whoPoint{
+        font-size: 22px;
+    }
+    .blockItem{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .trener h3{
+        font-size: 24px;
+    }
+    .priceSide h3{
+        font-size: 24px;
+    }
+    .priceSideText{
+        font-size: 16px;
+    }
+    .comments h2{
+        text-align: center;
+    }
+    .program{
+        margin-top: 70px;
+    }
+    .comments{
+        margin-top: 70px;
+        display: none;
+    }
+    .buttons{
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .lang{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .home h1{
+        font-size: 32px;
+        margin-top: 180px;
+    }
+    .home span{
+        margin-top: 44px;
+        padding: 8px 7px;
+    }
+    .sub{
+        margin-top: 50px;
+    }
+    .cation button{
+        margin-top: 45px;
+    }
+    .cationInfo span{
+        font-size: 22px;
+    }
+    .who{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .whoPoint{
+        font-size: 18px;
+    }
+    .trener h3{
+        font-size: 20px;
+    }
+    .programEnd{
+        font-size: 18px;
+    }
 }

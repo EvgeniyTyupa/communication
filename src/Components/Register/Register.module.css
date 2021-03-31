@@ -1,0 +1,92 @@
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(128, 128, 128, .3);
+    z-index: 15;
+}
+.window{
+    width: 35%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 38px -12px #f27125; 
+    padding: 20px 35px;
+    box-sizing: border-box;
+}
+.window form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.field{
+    width: 100%;
+    margin-top: 15px;
+}
+.field div{
+    width: 100%;
+}
+.close{
+    align-self: flex-end;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    color: #F27125 !important;
+}
+.window form button[type="submit"]{
+    background: #01737B !important;
+    border: 4px solid #F27125 !important;
+    width: 80%;
+    height: 55px;
+    color: white !important;
+    font-family: 'Montserrat' !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    transition-duration: .3s !important;
+    border-radius: 0 !important;
+    box-sizing: border-box;
+    margin-top: 25px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.close a{
+    text-decoration: none;
+    color: #f27125;
+    width: 100%;
+    height: 100%;
+}
+.window form button[type="submit"]:hover{
+    background: #F27125 !important;
+}
+
+
+@media screen and (max-width: 1024px){
+    .window{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 468px){
+    .window{
+        width: 95%;
+    }
+    .close{
+        font-size: 32px !important;
+    }
+    .window form button[type="submit"]{
+        font-size: 14px !important;
+    }
+}
+@media screen and (max-width: 350px){
+    .window form button[type="submit"]{
+        font-size: 12px !important;
+    }
+}

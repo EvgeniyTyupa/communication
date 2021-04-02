@@ -58,6 +58,12 @@ const Register = (props) => {
                     <div className={classes.field}>
                         <TextField inputRef={register({required: true})} error={errors.email ? true : false} classes={material} label={t("modal.email")} variant="outlined" name="email"/>
                     </div>
+                    <div className={classes.field}>
+                        <TextField inputRef={register({required: true})} error={errors.job ? true : false} classes={material} label={t("modal.job")} variant="outlined" name="job"/>
+                    </div>
+                    <div className={classes.field}>
+                        <TextField inputRef={register({required: true})} error={errors.why ? true : false} classes={material} multiline rows={5} label={t("modal.why")} variant="outlined" name="why"/>
+                    </div>
                     <Button type="submit">{t("modal.submit")}</Button>
                 </form> : 
                 <form>

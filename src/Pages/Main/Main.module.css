@@ -1006,6 +1006,9 @@
     .trener h3{
         text-align: center;
     }
+    .openBlock{
+        height: 600px;
+    }
 }
 
 @media screen and (max-width: 375px){
@@ -1054,16 +1057,18 @@
     .buttons{
         margin-top: 70px;
     }
+    
 }
 
 @media screen and (max-width: 350px){
     .lang{
         padding-left: 20px;
         padding-right: 20px;
+        padding-top: 20px;
     }
     .home h1{
         font-size: 32px;
-        margin-top: 180px;
+        margin-top: 135px;
     }
     .home span{
         margin-top: 44px;

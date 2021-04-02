@@ -249,10 +249,6 @@ const Main = (props) => {
                         </div>
                         <div className={classes.whoPoint}  data-aos="fade-right">
                             <span className={classes.for}>Для</span>
-                            <p>{t("who.1")}</p>
-                        </div>
-                        <div className={classes.whoPoint}  data-aos="fade-right">
-                            <span className={classes.for}>Для</span>
                             <p>{t("who.3")}</p>
                         </div>
                         <div className={classes.whoPoint}  data-aos="fade-right">

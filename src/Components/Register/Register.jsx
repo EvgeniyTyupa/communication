@@ -9,7 +9,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { connect } from 'react-redux';
 import { register, setIsRegistered } from '../../Redux/commonReducer';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root:{
@@ -43,6 +43,7 @@ const Register = (props) => {
     return(
         <div className={classes.main} data-aos="fade" data-aos-duration="300">
             {props.isFetching && <Preloader/>}
+            {props.isRegistered && <Redirect to="/success"/>}
             <div className={classes.window} data-aos="zoom-in" data-aos-duration="200">
                 <Button className={classes.close} onClick={()=>{props.setIsOpenRegisterModal(false)}}>
                     <NavLink to="/">&#x2715;</NavLink>

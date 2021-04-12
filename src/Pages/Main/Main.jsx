@@ -482,7 +482,7 @@ const Main = (props) => {
             </div>
             <div className={classes.buttons}>
                 <Button className={classes.registerBut}>
-                    <a target="_blank" href="https://secure.wayforpay.com/button/beafc695700e1">{t("pay")}</a>
+                    <a target="_blank" href="https://secure.wayforpay.com/button/b0a5b435b1e1d">{t("pay")}</a>
                 </Button>
                 <Button onClick={handleIsOpenModal} className={classes.registerBut}>
                     <NavLink to="/register">{t("register")}</NavLink>
